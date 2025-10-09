@@ -37,7 +37,7 @@ $films = $pdo->query("SELECT * FROM film ORDER BY created_at DESC")->fetchAll();
               alt="<?= htmlspecialchars($film['judul']) ?>">
             <h2><?= htmlspecialchars($film['judul']) ?></h2>
             <p>Harga: Rp <?= number_format($film['harga'], 0, ',', '.') ?></p>
-            <a href="booking.html" class="btn-book">Pesan Sekarang</a>
+            <a href="booking.php" class="btn-book">Pesan Sekarang</a>
           </div>
         <?php endforeach; ?>
       </div>
