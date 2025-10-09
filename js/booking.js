@@ -18,10 +18,19 @@ $(document).ready(function () {
     const film = $('#filmSelect').val();
     const jumlah = $('#jumlahTiket').val();
 
-    if (nama === "") { valid = false; pesan += "Nama wajib diisi!\n"; }
-    if (email === "" || !email.includes("@")) { valid = false; pesan += "Email tidak valid!\n"; }
-    if (!film) { valid = false; pesan += "Pilih film terlebih dahulu!\n"; }
-    if (jumlah <= 0) { valid = false; pesan += "Jumlah tiket minimal 1!\n"; }
+    if (nama === "") { 
+      valid = false; pesan += "Nama wajib diisi!\n"; 
+    }
+    if (email === "" || !email.includes("@")) { 
+      valid = false; pesan += "Email tidak valid!\n"; 
+    }
+    if (!film) { 
+      valid = false; pesan += "Pilih film terlebih dahulu!\n"; 
+    }
+    if (jumlah <= 0) { 
+      valid = false; pesan += "Jumlah tiket minimal 1!\n"; 
+
+    }
 
     if (!valid) {
       alert(pesan);
