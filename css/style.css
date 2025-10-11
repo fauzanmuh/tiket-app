@@ -10,8 +10,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #1a1a1a;
-  color: #fff;
+  background: #BADFDB;
+  color: #19183B;
   padding: 15px 30px;
   position: sticky;
   top: 0;
@@ -30,7 +30,7 @@
 }
 
 .nav-links a {
-  color: #fff;
+  color: #19183B;
   text-decoration: none;
   padding: 8px 14px;
   border-radius: 6px;
@@ -51,7 +51,7 @@
 /* Home Section */
 .home {
   padding: 50px 30px;
-  background: #fcf9ea;
+  background: #F5EFE6;
   min-height: 100vh;
 }
 
@@ -74,7 +74,7 @@
 }
 
 .film-card {
-  background: #fff;
+  background: #F5EFE6;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -119,7 +119,7 @@
 
 /* === CART LAYOUT === */
 .cart-section {
-  background: #f8f8f8;
+  background: #F5EFE6;
   padding: 40px 20px;
   min-height: 100vh;
 }

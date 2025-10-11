@@ -59,7 +59,7 @@ if (isset($_GET['edit'])) {
 
 <body>
     <nav class="navbar">
-        <div class="logo">🎬 TiketKu</div>
+        <div class="logo">🎬 LenTix</div>
         <ul class="nav-links">
             <li><a href="index.php">Home</a></li>
             <li><a href="booking.php">Pemesanan</a></li>

@@ -9,7 +9,7 @@ $films = $pdo->query("SELECT * FROM film ORDER BY created_at DESC")->fetchAll();
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home - TiketKu</title>
+  <title>Home - LenTix</title>
   <link rel="stylesheet" href="css/style.css" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="js/script.js" defer></script>
@@ -17,7 +17,7 @@ $films = $pdo->query("SELECT * FROM film ORDER BY created_at DESC")->fetchAll();
 
 <body>
   <nav class="navbar">
-    <div class="logo">🎬 TiketKu</div>
+    <div class="logo">🎬 LenTix</div>
     <ul class="nav-links">
       <li><a href="index.php">Home</a></li>
       <li><a href="booking.php">Pemesanan</a></li>

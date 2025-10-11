@@ -18,7 +18,7 @@ $films = $pdo->query("SELECT * FROM film ORDER BY created_at DESC")->fetchAll();
 
 <body>
   <nav class="navbar">
-    <div class="logo">🎬 TiketKu</div>
+    <div class="logo">🎬 LenTix</div>
     <ul class="nav-links">
       <li><a href="index.php">Home</a></li>
       <li><a href="booking.php" class="active">Pemesanan</a></li>
