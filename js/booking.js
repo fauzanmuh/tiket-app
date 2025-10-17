@@ -82,7 +82,7 @@ $(document).ready(function () {
       method: "POST",
       data: $(this).serialize(),
       success: function (res) {
-        $("#hasilPemesanan").html(res).hide().fadeIn(400).delay(3000).fadeOut(400);
+        $("#hasilPemesanan").html(res).hide().fadeIn(400).delay(5000).fadeOut(400);
         $("#formPemesanan")[0].reset();
         $("#film_id").val("");
         $("#filmTitle").val("");

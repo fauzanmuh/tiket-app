@@ -47,6 +47,7 @@ if (isset($_GET['edit'])) {
     $editFilm = $stmt->fetch();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="id">
 
@@ -62,35 +63,40 @@ if (isset($_GET['edit'])) {
         <div class="logo">🎬 LenTix</div>
         <ul class="nav-links">
             <li><a href="index.php">Home</a></li>
-            <li><a href="booking.php">Pemesanan</a></li>
-            <li><a href="data.php">Data Pesanan</a></li>
             <li><a href="film.php">Kelola Film</a></li>
         </ul>
         <div class="hamburger">&#9776;</div>
     </nav>
 
-    <main class="container">
-        <h1>Kelola Film</h1>
+    <div class="container">
+        <div class="crud-container">
+            <h1>Kelola Film</h1>
 
-        <?php if ($editFilm): ?>
-            <h2>Edit Film</h2>
-            <form method="post" class="crud-form">
-                <input type="hidden" name="id" value="<?= $editFilm['id'] ?>">
-                <input type="text" name="judul" value="<?= htmlspecialchars($editFilm['judul']) ?>" required>
-                <input type="number" name="harga" value="<?= $editFilm['harga'] ?>" required>
-                <input type="text" name="gambar" value="<?= htmlspecialchars($editFilm['gambar']) ?>">
-                <button type="submit" name="update">Update</button>
-                <a href="film.php" class="btn-cancel">Batal</a>
-            </form>
-        <?php else: ?>
-            <h2>Tambah Film</h2>
-            <form method="post" class="crud-form">
-                <input type="text" name="judul" placeholder="Judul Film" required>
-                <input type="number" name="harga" placeholder="Harga Tiket" required>
-                <input type="text" name="gambar" placeholder="URL Gambar (opsional)">
-                <button type="submit" name="tambah">Tambah</button>
-            </form>
-        <?php endif; ?>
+            <?php if ($editFilm): ?>
+                <h2>Edit Film</h2>
+                <form method="post" class="crud-form">
+                    <input type="hidden" name="id" value="<?= $editFilm['id'] ?>">
+                    <input type="text" name="judul" value="<?= htmlspecialchars($editFilm['judul']) ?>"
+                        placeholder="Judul Film" required>
+                    <input type="number" name="harga" value="<?= $editFilm['harga'] ?>" placeholder="Harga Tiket" required>
+                    <input type="text" name="gambar" value="<?= htmlspecialchars($editFilm['gambar']) ?>"
+                        placeholder="URL Gambar (opsional)">
+
+                    <div style="display: flex; gap: 10px;">
+                        <button type="submit" name="update" style="flex: 1;">Update</button>
+                        <a href="film.php" class="btn-cancel" style="flex: 1;">Batal</a>
+                    </div>
+                </form>
+            <?php else: ?>
+                <h2>Tambah Film</h2>
+                <form method="post" class="crud-form">
+                    <input type="text" name="judul" placeholder="Judul Film" required>
+                    <input type="number" name="harga" placeholder="Harga Tiket" required>
+                    <input type="text" name="gambar" placeholder="URL Gambar (opsional)">
+                    <button type="submit" name="tambah">Tambah</button>
+                </form>
+            <?php endif; ?>
+        </div>
 
         <h2>Daftar Film</h2>
         <table class="table">
@@ -120,8 +126,7 @@ if (isset($_GET['edit'])) {
                 <?php endforeach; ?>
             </tbody>
         </table>
-
-    </main>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/script.js" defer></script>
